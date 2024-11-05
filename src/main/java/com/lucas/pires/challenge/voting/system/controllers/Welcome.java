@@ -20,10 +20,10 @@ public class Welcome {
         return "Bem vindo(a) ao sistema de votação.";
     }
 
-    @Operation(summary = "Welcome to application by name")
+    @Operation(summary = "Welcome to application with name")
     @ApiResponse(responseCode = "200", description = "Welcome message", content = @Content(mediaType = "application/text"))
     @GetMapping("{name}")
-    public String getWelcomeByName(@Parameter(description = "Operators name") @PathVariable String name) {
+    public String getWelcomeWithName(@Parameter(description = "Operators name") @PathVariable String name) {
         return "Bem vindo(a) ao sistema de votação %s.".formatted(name);
     }
 }
