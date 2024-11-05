@@ -1,4 +1,4 @@
-package com.lucas.pires.challenge.voting.sistem;
+package com.lucas.pires.challenge.voting.system;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
