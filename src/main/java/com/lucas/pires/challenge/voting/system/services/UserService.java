@@ -14,6 +14,16 @@ public class UserService {
     @Autowired
     private UserRepository _userRepository;
 
+    public ResponseEntity<?> getAll() {
+        try {
+            var userList = _userRepository.getAll();
+
+            return ResponseEntity.status(HttpStatus.OK).body(userList);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("Internal error!");
+        }
+    }
+
     public ResponseEntity<?> createUser(CreateUserAdapter userRequest) {
         try {
             if(userRequest.cpf.length() != 11) {
