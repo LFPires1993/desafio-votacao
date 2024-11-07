@@ -21,7 +21,7 @@ public class StaveService {
             }
 
             if (staveRequest.minutesDuration < 1) {
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Minutes duration can't be less then 1 minute!");
+                staveRequest.minutesDuration = 1;
             }
 
             var stave = new StaveDto(staveRequest);
