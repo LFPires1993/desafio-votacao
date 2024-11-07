@@ -1,7 +1,7 @@
 package com.lucas.pires.challenge.voting.system.controllers;
 
-import com.lucas.pires.challenge.voting.system.dtos.adapters.CreateUserAdapter;
-import com.lucas.pires.challenge.voting.system.services.UserService;
+import com.lucas.pires.challenge.voting.system.dtos.adapters.CreateStaveAdapter;
+import com.lucas.pires.challenge.voting.system.services.StaveService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user/")
-public class User {
-
+@RequestMapping("/stave/")
+public class Stave {
     @Autowired
-    private UserService _userService;
+    private StaveService _staveService;
 
-    @Operation(summary = "Create employee")
-    @ApiResponse(responseCode = "200", description = "Create a new system user", content = @Content(mediaType = "application/json"))
+    @Operation(summary = "Create stave")
+    @ApiResponse(responseCode = "200", description = "Create a new stave", content = @Content(mediaType = "application/json"))
     @ApiResponse(responseCode = "500", description = "Internal error!", content = @Content(mediaType = "application/json"))
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody CreateUserAdapter userRequest) {
-        return _userService.createUser(userRequest);
+    public ResponseEntity<?> createStave(@RequestBody CreateStaveAdapter staveRequest) {
+        return _staveService.createStave(staveRequest);
     }
 }
