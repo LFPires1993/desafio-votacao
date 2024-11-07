@@ -19,7 +19,6 @@ public class UserService {
             if(userRequest.cpf.length() != 11) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("CPF inválid!");
             }
-            System.out.println(userRequest.cpf.length());
 
             var user = new UserDto(userRequest);
 
