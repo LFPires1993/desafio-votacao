@@ -1,12 +1,11 @@
 package com.lucas.pires.challenge.voting.system.controllers;
 
-import com.lucas.pires.challenge.voting.system.dtos.adapters.CreateStaveAdapter;
 import com.lucas.pires.challenge.voting.system.dtos.adapters.VoteAdapter;
-import com.lucas.pires.challenge.voting.system.services.StaveService;
 import com.lucas.pires.challenge.voting.system.services.VoteService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/vote/")
-public class Vote {
+@Tag(name = "Vote")
+public class VoteController {
     @Autowired
     private VoteService _voteService;
 
