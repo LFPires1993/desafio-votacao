@@ -5,6 +5,8 @@ import com.lucas.pires.challenge.voting.system.repositories.interfaces.IStaveRep
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class StaveRepository {
     @Autowired
@@ -12,6 +14,10 @@ public class StaveRepository {
 
     public StaveDto getById(int id) {
         return _iStaveREpository.findById((long) id).orElse(null);
+    }
+
+    public List<StaveDto> getAll() {
+        return _iStaveREpository.findAll();
     }
 
     public StaveDto create(StaveDto stave) {
