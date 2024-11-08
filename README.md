@@ -1,3 +1,18 @@
+# Aplicação de teste - Votação
+
+Aplicação criada em Java 23 e sem uso de dependências externas.
+
+O grande foco deste desenvolvimento, foi de explicitar a lógica por trás da aplicação e evidenciar as técnicas utilizadas pelo desenvolvedor durante a realização do teste.
+
+A execução da aplicação é feita de forma simples, sem a necessidade de intervenção por parte do operador, é requisitado apenas a versão 23 do Java.
+
+O banco de dados utilizado foi o SqLite e está embutido na aplicação, não necessitando conexões externas para a utilização da aplicação.
+
+A aplicação foi pensada levando em conta a simplicidade do código tal como sua velocidade de trabalho e execução, buscando sempre o equilibrio em táticas mais simples e performáticas.
+
+Após a execução, a aplicação pode ser utilizada através de algum provedor de chamadas como por exemplo Postman ou Insomnina, e pode ser acessada sua documentação via swagger [clicando aqui](http://localhost:8080/api-docs/ui).
+
+Se anterior a execução a porta for alterada de 8080 para x, o link de acesso deve ser alterado.
 # Votação
 
 ## Objetivo
@@ -27,9 +42,9 @@ Lembre de deixar todas as orientações necessárias para executar o seu código
 ### Tarefas bônus
 
 - Tarefa Bônus 1 - Integração com sistemas externos
-  - Criar uma Facade/Client Fake que retorna aleátoriamente se um CPF recebido é válido ou não.
-  - Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode usar geradores de CPF para gerar CPFs válidos
-  - Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não pode (UNABLE_TO_VOTE) executar a operação. Essa operação retorna resultados aleatórios, portanto um mesmo CPF pode funcionar em um teste e não funcionar no outro.
+    - Criar uma Facade/Client Fake que retorna aleátoriamente se um CPF recebido é válido ou não.
+    - Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode usar geradores de CPF para gerar CPFs válidos
+    - Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não pode (UNABLE_TO_VOTE) executar a operação. Essa operação retorna resultados aleatórios, portanto um mesmo CPF pode funcionar em um teste e não funcionar no outro.
 
 ```
 // CPF Ok para votar

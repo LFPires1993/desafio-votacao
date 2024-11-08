@@ -1,4 +1,4 @@
-package com.lucas.pires.challenge.voting.sistem;
+package com.lucas.pires.challenge.voting.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
